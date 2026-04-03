@@ -12,19 +12,8 @@
             display: flex;
             align-items: center;
         }
-        .main-content {
+        table {
             min-height: 80vh;
-            display: flex;
-            align-items: flex-start;
-        }
-        .column {
-            border: 1px solid black;
-        }
-        .left, .right {
-            flex: 1;
-        }
-        .center {
-            flex: 2;
         }
     </style>
 </head>
@@ -42,29 +31,33 @@
      <hr>
 
      <!-- Main content of the homepage -->
-      <div class="main-content">
-        <!-- Left column: Tournament Button -->
-        <div class="column left">
-            <p>Upcoming Tournaments!</p>
-            <button>List of upcoming, large-scale events</button>
-        </div>
+      <table width="100%" border="1">
+        <tr valign="top">
 
-        <!-- Center Column -->
-        <div class="column center">
-            <button>Checkout the latest Pokemon TCG releases!</button>
-            <br><br>
-            <p>Rotating Card Art</p>
-        </div>
+            <!-- Left column: Tournament Button -->
+             <td width="25%">
+                <p>Upcoming Tournaments!</p>
+                <button>List of upcoming, large-scale events</button>
+             </td>
 
-        <!-- Right Column -->
-        <div class="column right">
-            <a href="beginner-guide.html"><button style="width: 100%;">New to Pokemon TCG? Click here!</button></a>
-            <br><br>
-            <a href="tips-and-tricks.html"><button style="width: 100%;">Tips and Tricks to help you succed!</button></a>
-            <br><br>
-            <a href="ai-chatbot-info.html"><button style="width: 100%;">Interesed in what the AI Chatbot can do for you? Click here to learn more!</button></a>
-        </div>
-      </div>
+            <!-- Center Column -->
+             <td width="50%">
+                <button>Checkout the latest Pokemon TCG releases!</button>
+                <br><br>
+                <p>Rotating Card Art</p>
+            </td>
+
+            <!-- Right Column -->
+             <td width="25%">
+                <a href="beginner-guide.html"><button style="width: 100%;">New to Pokemon TCG? Click here!</button></a>
+                <br><br>
+                <a href="tips-and-tricks.html"><button style="width: 100%;">Tips and Tricks to help you succed!</button></a>
+                <br><br>
+                <a href="ai-chatbot-info.html"><button style="width: 100%;">Interesed in what the AI Chatbot can do for you? Click here to learn more!</button></a>
+             </td>
+
+        </tr>
+      </table>
 
       <br>
       <button>AI Chatbot Access</button>
