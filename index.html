@@ -1,12 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My First Page</title>
+    <meta charset="UTF-8">
+    <title>Group 3 Site</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        div {
+            height: 80px;
+            display: flex;
+            align-items: center;
+        }
+        .main-content {
+            min-height: 80vh;
+            display: flex;
+            align-items: flex-start;
+        }
+        .column {
+            border: 1px solid black;
+        }
+        .left, .right {
+            flex: 1;
+        }
+        .center {
+            flex: 2;
+        }
+    </style>
 </head>
 <body>
+    <!-- Simple version of navigation bar -->
+     <div>
+        <img src="Placeholder Logo.png" alt="Logo">
+        <a href="homepage.html"><button>Home</button></a>
+        <a href="events.html"><button>Events</button></a>
+        <a href="card-database.html"><button>Card Database</button></a>
+        <a href="subscription.html"><button>Your Subscription Status: (Free or Paid)</button></a>
+        <a href="profile.html"><button>User Profile</button></a>
+     </div>
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
+     <hr>
+
+     <!-- Main content of the homepage -->
+      <div class="main-content">
+        <!-- Left column: Tournament Button -->
+        <div class="column left">
+            <p>Upcoming Tournaments!</p>
+            <button>List of upcoming, large-scale events</button>
+        </div>
+
+        <!-- Center Column -->
+        <div class="column center">
+            <button>Checkout the latest Pokemon TCG releases!</button>
+            <br><br>
+            <p>Rotating Card Art</p>
+        </div>
+
+        <!-- Right Column -->
+        <div class="column right">
+            <a href="beginner-guide.html"><button style="width: 100%;">New to Pokemon TCG? Click here!</button></a>
+            <br><br>
+            <a href="tips-and-tricks.html"><button style="width: 100%;">Tips and Tricks to help you succed!</button></a>
+            <br><br>
+            <a href="ai-chatbot-info.html"><button style="width: 100%;">Interesed in what the AI Chatbot can do for you? Click here to learn more!</button></a>
+        </div>
+      </div>
+
+      <br>
+      <button>AI Chatbot Access</button>
 
 </body>
 </html>
