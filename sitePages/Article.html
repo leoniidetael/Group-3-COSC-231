@@ -5,6 +5,8 @@
     <title>Group 3 Site</title>
     <link rel="stylesheet" href="/CSS_Files/Article.css">
     <link rel="stylesheet" href="/CSS_Files/navBar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/CSS_Files/AIChatBot.css">
     
     <!--Top Navigation Bar-->
     <header class="site-header">
@@ -25,7 +27,7 @@
                 <li><a class="active" href="/index.html">Home</a></li>
                 <li><a href="/sitePages/events.html">Events</a></li>
                 <li><a href="/sitePages/card-database.html">Card Database</a></li>
-                <li><a href="/sitePages/userProfile.html">User Profile</a></li>
+                <li><a href="/sitePages/userProfile.html"><i class="fas fa-user-circle"></i></a></li>
                 <li><a class="cta" href="#">Contact Us</a></li>
             </ul>
         </nav>
@@ -34,5 +36,18 @@
 <body>
     <h1>Template Article Page</h1>
      <hr>
+
+     <!--AI Chatbot Button-->
+    <button id="fab">☰</button>
+
+    <!-- AI Chatbot Slide-Out Menu -->
+    <div id="fab-menu">
+        <h1>AI Chatbot</h1>
+        <p>Ask me anything about the Pokemon TCG!</p>
+        <input type="text" id="chat-input" placeholder="Type your question here...">
+        <button id="send-btn">Send</button>
+    </div>
+
+    <script src="/JS/AIChatBot.js"></script>
 </body>
 </html>
