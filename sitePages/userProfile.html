@@ -4,16 +4,32 @@
     <meta charset="UTF-8">
     <title>Group 3 Site</title>
     <link rel="stylesheet" href="/CSS_Files/userProfile.css">
-  
-    <!-- Simple version of primary navigation bar. This bar stays in the header. -->
-     <div>
-        <img src="Placeholder Logo.png" alt="Logo">
-        <a href="/index.html"><button>Home</button></a>
-        <a href="/sitePages/events.html"><button>Events</button></a>
-        <a href="/sitePages/card-database.html"><button>Card Database</button></a>
-        <a href="/sitePages/subscription.html"><button>Your Subscription Status: (Free or Paid)</button></a>
-        <a href="/sitePages/userProfile.html"><button>User Profile</button></a>
-     </div>
+    <link rel="stylesheet" href="/CSS_Files/navBar.css">
+    
+    <!--Top Navigation Bar-->
+    <header class="site-header">
+        <nav class="navbar" aria-label="Primary">
+            <!-- Brand -->
+            <a class="brand" href="/">Group 3 Site</a>
+
+            <!-- Mobile menu toggle (CSS-only) -->
+            <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+            <label for="nav-toggle" class="nav-toggle-label" aria-label="Open menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <!-- Nav links -->
+            <ul class="nav-links">
+                <li><a class="active" href="/index.html">Home</a></li>
+                <li><a href="/sitePages/events.html">Events</a></li>
+                <li><a href="/sitePages/card-database.html">Card Database</a></li>
+                <li><a href="/sitePages/userProfile.html">User Profile</a></li>
+                <li><a class="cta" href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
 </head>
 <body>
     <h1>Welcome to Your Profile</h1>

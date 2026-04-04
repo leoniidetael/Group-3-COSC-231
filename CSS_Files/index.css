@@ -6,12 +6,6 @@ body {
     margin: 0;
     }
 
-div {
-    height: 80px;
-    display: flex;
-    align-items: center;
-    background-color: #a50808;
-    }
 
 table {
     min-height: 80vh;
