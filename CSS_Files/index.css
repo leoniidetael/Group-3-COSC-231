@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    }
+
+div {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    }
+
+table {
+    min-height: 80vh;
+    margin: 40px;
+    }
+
+th, td {
+    padding: 12px 16px;
+    border: 1px solid #ccc;
+    text-align: left;
+    }
+
+/* Style for all Header 1s */
+h1 {
+    text-align: center;
+    color: #A60303;
+    }
+
+/* Style for the introduction text */
+#intro {
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.75rem;
+    }
+
+/* Style for the title */
+#title {
+    color: #A60303;
+    font-weight: bold;
+    text-align: center;
+    font-size: 5rem;
+    }
