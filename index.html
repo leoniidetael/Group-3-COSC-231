@@ -36,38 +36,44 @@
         </nav>
     </header>
 
-    <p id="title">Welcome to the Pokemon TCG Hub!</p>
-    <p id="intro">Discover the latest news, events, and cards from the world of Pokemon TCG!</p>
-    <hr>
+    <div class="page-layout">
 
-    <!-- Main content of the homepage -->
-    <section class="hero-grid">
-        <article class="hero-card">
-            <h2>Upcoming Tournaments!</h2>
-            <p>List of upcoming, large-scale events…</p>
-        </article>
+        <div class="main-content">
+            <p id="title">Welcome to the Pokemon TCG Hub!</p>
+            <p id="intro">Discover the latest news, events, and cards from the world of Pokemon TCG!</p>
+            <hr>
 
-        <article class="hero-card" data-bg="images/tournaments.jpg">
-            <h2>Latest Pokemon TCG Releases</h2>
-            <p>Lorem ipsum…</p>
-        </article>
+            <!-- Main content of the homepage -->
+            <section class="hero-grid">
+                <article class="hero-card" data-bg="images/upcomingTournaments.jpg">
+                    <h2>Upcoming Tournaments!</h2>
+                    <p> <a href="events.html">Click HERE to learn more</a></p>
+                </article>
 
-        <article class="hero-card" data-bg="images/tournaments.jpg">
-            <h2>Rotating Card Art</h2>
-            <p>New to Pokemon TCG? Click here!</p>
-        </article>
+                <article class="hero-card" data-bg="images/latestPokemonTcgReleases.jpg">
+                    <h2>Latest Pokemon TCG Releases</h2>
+                    <p> <a href="articleLatestReleases.html">Click HERE to learn more</a></p>
+                </article>
 
-        <article class="hero-card" data-bg="images/tournaments.jpg">
-            <h2>Tips and Tricks</h2>
-            <p>Help you succeed…</p>
-        </article>
+                <!--<article class="hero-card" data-bg="images/tournaments.jpg">
+                    <h2>Rotating Card Art</h2>
+                    <p>Check out the latest card art from the Pokemon TCG!</p>
+                </article>-->
+            </section>
+        </div>
 
-        <article class="hero-card" data-bg="images/tournaments.jpg">
-            <h2>AI Chatbot</h2>
-            <p>Click here to learn more!</p>
-        </article>
-    </section>
+        <aside class="right-sidebar">
+            <h3>Helpful Articles</h3>
+            <ul>
+                <li class="hero-card" class="hero-grid" data-bg="images/newToTheGame.jpg"><a href="beginners-guide.html">New to Pokemon TCG?</a></li>
+                <hr>
+                <li class="hero-card" class="hero-grid" data-bg="images/tipsAndTricks.jpg"><a href="tips-and-tricks.html">Tips & Tricks to the Game</a></li>
+                <hr>
+                <li class="hero-card" class="hero-grid" data-bg="images/aiChatbot.jpg"><a href="article_getToKnowTheAIAgent.html">AI Chatbot Overview</a></li>
+            </ul>
+        </aside>
 
+    </div>
 
     <!--AI Chatbot Button-->
     <button id="fab">☰</button>
@@ -81,5 +87,12 @@
     </div>
 
     <script src="AIChatBot.js"></script>
+    <script>
+        // Set background images from data-bg attributes
+        document.querySelectorAll('.hero-card[data-bg]').forEach(card => {
+            const bgImage = card.getAttribute('data-bg');
+            card.style.setProperty('--bg-image', `url(${bgImage})`);
+        });
+    </script>
 </body>
 </html>
