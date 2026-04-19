@@ -39,3 +39,93 @@ h1 {
     text-align: center;
     font-size: 5rem;
     }
+/* ===== GLOBAL PAGE STYLING ===== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e6e6e6; /* light gray background */
+}
+
+/* ===== PAGE TITLE ===== */
+.page-title {
+    text-align: center;
+    color: #8B0000; /* dark red */
+    margin: 30px 0 10px;
+    font-size: 36px;
+}
+
+.page-divider {
+    border: none;
+    height: 1px;
+    background-color: #aaa;
+    margin-bottom: 20px;
+}
+
+/* ===== LAYOUT ===== */
+.events-container {
+    display: flex;
+    flex-direction: row; /* results left, filters right */
+    gap: 25px;
+    padding: 20px 40px;
+}
+
+/* ===== RESULTS SECTION ===== */
+.results {
+    flex: 1;
+}
+
+.results h2 {
+    margin-top: 0;
+}
+
+/* Event cards */
+.event-card {
+    background: white;
+    border-radius: 10px;
+    padding: 18px;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-3px);
+}
+
+.event-card h3 {
+    margin: 0 0 8px;
+}
+
+/* ===== FILTER SIDEBAR ===== */
+.filters {
+    width: 280px;
+    background: #f7f7f7;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    height: fit-content;
+}
+
+.filters h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* Inputs & dropdowns */
+.filters input,
+.filters select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+/* Labels */
+.filters label {
+    font-weight: bold;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 5px;
+}

@@ -12,19 +12,14 @@
 
     <!--Top Navigation Bar-->
     <header class="site-header">
-        <nav class="navbar" aria-label="Primary">
-            <!-- Brand -->
+        <nav class="navbar">
             <a class="brand" href="index.html">Group 3 Site</a>
 
-            <!-- Mobile menu toggle (CSS-only) -->
-            <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
-            <label for="nav-toggle" class="nav-toggle-label" aria-label="Open menu">
-                <span></span>
-                <span></span>
-                <span></span>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span><span></span><span></span>
             </label>
 
-            <!-- Nav links -->
             <ul class="nav-links">
                 <li><a class="active" href="index.html">Home</a></li>
                 <li><a href="events.html">Events</a></li>
@@ -35,20 +30,87 @@
         </nav>
     </header>
 
-    <h1>Events Page</h1>
-     <hr>
+    <h1 class="page-title">Events Page</h1>
+    <hr class="page-divider">
 
-     <!--AI Chatbot Button-->
+    <main class="events-container">
+
+    <!-- LEFT: RESULTS -->
+    <section class="results">
+        <h2>Upcoming Events</h2>
+
+        <div class="event-card">
+            <h3>Local Pokémon Tournament</h3>
+            <p>Date: April 25</p>
+            <p>Location: Game Store A</p>
+        </div>
+
+        <div class="event-card">
+            <h3>Regional Championship</h3>
+            <p>Date: May 3</p>
+            <p>Location: Convention Center</p>
+        </div>
+
+        <div class="event-card">
+            <h3>Casual League Night</h3>
+            <p>Date: Weekly</p>
+            <p>Location: Community Hub</p>
+        </div>
+    </section>
+
+    <!-- RIGHT: FILTERS -->
+    <aside class="filters">
+        <h2>Search Events</h2>
+
+        <input type="text" placeholder="Enter City, State or Zip">
+
+        <label>Start Date</label>
+        <select>
+            <option>Select Date</option>
+            <option>Today</option>
+            <option>This Week</option>
+            <option>This Month</option>
+        </select>
+
+        <label>Distance</label>
+        <select>
+            <option>Select Distance</option>
+            <option>5 miles</option>
+            <option>10 miles</option>
+            <option>25 miles</option>
+            <option>50 miles</option>
+        </select>
+
+        <label>Price</label>
+        <select>
+            <option>Any</option>
+            <option>Free</option>
+            <option>$1–$10</option>
+            <option>$10+</option>
+        </select>
+
+        <label>Format</label>
+        <select>
+            <option>Any</option>
+            <option>Standard</option>
+            <option>Expanded</option>
+            <option>Casual</option>
+        </select>
+    </aside>
+
+</main>
+
+    <!--AI Chatbot Button-->
     <button id="fab">☰</button>
 
     <!-- AI Chatbot Slide-Out Menu -->
     <div id="fab-menu">
-        <h1>AI Chatbot</h1>
+        <h2>AI Chatbot</h2>
         <p>Ask me anything about the Pokemon TCG!</p>
         <input type="text" id="chat-input" placeholder="Type your question here...">
         <button id="send-btn">Send</button>
     </div>
 
     <script src="AIChatBot.js"></script>
+
 </body>
-</html>
