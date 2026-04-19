@@ -10,38 +10,103 @@
 </head>
 <body>
 
-    <!--Top Navigation Bar-->
-    <header class="site-header">
-        <nav class="navbar" aria-label="Primary">
-            <!-- Brand -->
-            <a class="brand" href="index.html">Group 3 Site</a>
+<header class="site-header">
+    <nav class="navbar">
+        <a class="brand" href="index.html">Group 3 Site</a>
 
-            <!-- Mobile menu toggle (CSS-only) -->
-            <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
-            <label for="nav-toggle" class="nav-toggle-label" aria-label="Open menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span><span></span><span></span>
+        </label>
 
-            <!-- Nav links -->
-            <ul class="nav-links">
-                <li><a class="active" href="index.html">Home</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="card-database.html">Card Database</a></li>
-                <li><a href="userProfile.html"><i class="fas fa-user-circle"></i></a></li>
-                <li><a class="cta" href="subscribe.html">Subscribe</a></li>
-            </ul>
-        </nav>
-    </header>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a class="active" href="card-database.html">Card Database</a></li>
+            <li><a href="userProfile.html"><i class="fas fa-user-circle"></i></a></li>
+            <li><a class="cta" href="subscribe.html">Subscribe</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <h1>Card Database Page</h1>
-     <hr>
+<h1 class="page-title">Card Database</h1>
+<hr class="page-divider">
 
-     <!--AI Chatbot Button-->
+<div class="container">
+
+    <main class="results">
+        <h2>Cards Matching Filters</h2>
+
+        <div class="card-grid">
+            <div class="card">
+                <p>Pikachu</p>
+            </div>
+            <div class="card">
+                <p>Charizard</p>
+            </div>
+            <div class="card">
+                <p>Bulbasaur</p>
+            </div>
+            <div class="card">
+                <p>Squirtle</p>
+            </div>
+        </div>
+    </main>
+
+    <aside class="filters">
+        <h2>Search Filters</h2>
+
+        <label>Search by name</label>
+        <input type="text" placeholder="Enter card name">
+
+        <label>Type</label>
+        <select>
+            <option>All</option>
+            <option>Fire</option>
+            <option>Water</option>
+            <option>Grass</option>
+            <option>Electric</option>
+            <option>Other</option>
+        </select>
+
+        <label>HP</label>
+        <select>
+            <option>Any</option>
+            <option>10-50</option>
+            <option>60-100</option>
+            <option>110+</option>
+        </select>
+
+        <label>Series</label>
+        <select>
+            <option>All</option>
+            <option>Base</option>
+            <option>Scarlet & Violet</option>
+        </select>
+
+        <label>Rarity</label>
+        <select>
+            <option>All</option>
+            <option>Common</option>
+            <option>Uncommon</option>
+            <option>Rare</option>
+        </select>
+
+        <label>Release Date</label>
+        <select>
+            <option>Any</option>
+            <option>2024+</option>
+            <option>2020-2023</option>
+            <option>Before 2020</option>
+        </select>
+    </aside>
+
+</div>
+
+     
     <button id="fab">☰</button>
 
-    <!-- AI Chatbot Slide-Out Menu -->
+    
     <div id="fab-menu">
         <h1>AI Chatbot</h1>
         <p>Ask me anything about the Pokemon TCG!</p>
