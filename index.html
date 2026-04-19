@@ -36,64 +36,44 @@
         </nav>
     </header>
 
-    <p id="title">Welcome to the Pokemon TCG Hub!</p>
-    <p id="intro">Discover the latest news, events, and cards from the world of Pokemon TCG!</p>
-    <hr>
+    <div class="page-layout">
 
-    <!-- Main content of the homepage -->
-    <table width="100%" border="1">
-        <tr valign="top">
+        <div class="main-content">
+            <p id="title">Welcome to the Pokemon TCG Hub!</p>
+            <p id="intro">Discover the latest news, events, and cards from the world of Pokemon TCG!</p>
+            <hr>
 
-            <!-- Left column -->
-            <td width="25%">
-                <h1>Upcoming Tournaments!</h1>
-                <a href="tournaments.html">
-                    <button>List of upcoming, large-scale events</button>
-                </a>
+            <!-- Main content of the homepage -->
+            <section class="hero-grid">
+                <article class="hero-card" data-bg="images/upcomingTournaments.jpg">
+                    <h2>Upcoming Tournaments!</h2>
+                    <p> <a href="events.html">Click HERE to learn more</a></p>
+                </article>
 
-                <p>
-                Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae 
-                pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean 
-                sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa 
-                nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu.
-                Ad litora torquent per conubia nostra inceptos himenaeos.
-                </p>
-            </td>
+                <article class="hero-card" data-bg="images/latestPokemonTcgReleases.jpg">
+                    <h2>Latest Pokemon TCG Releases</h2>
+                    <p> <a href="articleLatestReleases.html">Click HERE to learn more</a></p>
+                </article>
 
-            <!-- Center Column -->
-            <td width="50%">
-                <a href="card-database.html">
-                    <button>Checkout the latest Pokemon TCG releases!</button>
-                </a>
+                <!--<article class="hero-card" data-bg="images/tournaments.jpg">
+                    <h2>Rotating Card Art</h2>
+                    <p>Check out the latest card art from the Pokemon TCG!</p>
+                </article>-->
+            </section>
+        </div>
 
-                <p>
-                Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing elit quisque 
-                faucibus ex sapien vitae. Ex sapien vitae pellentesque sem placerat in id. Placerat in id 
-                cursus mi pretium tellus duis. Pretium tellus duis convallis tempus leo eu aenean.
-                </p>
+        <aside class="right-sidebar">
+            <h3>Helpful Articles</h3>
+            <ul>
+                <li class="hero-card" class="hero-grid" data-bg="images/newToTheGame.jpg"><a href="beginners-guide.html">New to Pokemon TCG?</a></li>
+                <hr>
+                <li class="hero-card" class="hero-grid" data-bg="images/tipsAndTricks.jpg"><a href="tips-and-tricks.html">Tips & Tricks to the Game</a></li>
+                <hr>
+                <li class="hero-card" class="hero-grid" data-bg="images/aiChatbot.jpg"><a href="article_getToKnowTheAIAgent.html">AI Chatbot Overview</a></li>
+            </ul>
+        </aside>
 
-                <br><br>
-
-                <p>Rotating Card Art</p>
-            </td>
-
-            <!-- Right Column -->
-            <td width="25%">
-                <a href="beginner-guide.html">
-                    <button style="width: 100%;">New to Pokemon TCG? Click here!</button>
-                </a>
-                <br><br>
-                <a href="tips-and-tricks.html">
-                    <button style="width: 100%;">Tips and Tricks to help you succeed!</button>
-                </a>
-                <br><br>
-                <a href="article_getToKnowTheAIAgent.html">
-                    <button style="width: 100%;">Interested in what the AI Chatbot can do for you? Click here to learn more!</button>
-                </a>
-            </td>
-
-        </tr>
-    </table>
+    </div>
 
     <!--AI Chatbot Button-->
     <button id="fab">☰</button>
@@ -107,5 +87,12 @@
     </div>
 
     <script src="AIChatBot.js"></script>
+    <script>
+        // Set background images from data-bg attributes
+        document.querySelectorAll('.hero-card[data-bg]').forEach(card => {
+            const bgImage = card.getAttribute('data-bg');
+            card.style.setProperty('--bg-image', `url(${bgImage})`);
+        });
+    </script>
 </body>
 </html>
