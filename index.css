@@ -41,10 +41,80 @@ h1 {
     }
 /* ===== GLOBAL PAGE STYLING ===== */
 body {
+    min-height: 800px;
+    border: 8px solid #5a236f;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #e6e6e6; /* light gray background */
 }
+
+/* ===== index.html flexbox Styling ===== */
+.hero-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.hero-card {
+    position: relative;
+    flex: 1 1 calc(33.333% - 20px);
+    height: 220px;
+    padding: 20px;
+    border-radius: 12px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+/* Apply background image from data attribute */
+.hero-card[data-bg] {
+    background-image: var(--bg-image);
+}
+
+/* Overlay */
+.hero-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.1));
+    z-index: 1;
+}
+
+/* Text stays above overlay */
+.hero-card * {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-card:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 900px) {
+    .hero-card {
+        flex: 1 1 calc(50% - 20px); /* 2 columns */
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-card {
+        flex: 1 1 100%; /* 1 column */
+    }
+}
+
 
 /* ===== PAGE TITLE ===== */
 .page-title {
