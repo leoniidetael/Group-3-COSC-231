@@ -129,3 +129,76 @@ body {
     display: block;
     margin-bottom: 5px;
 }
+
+.page-title {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Sidebar */
+.filters {
+    width: 250px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.filters h2 {
+    margin-bottom: 10px;
+}
+
+.filters label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.filters input,
+.filters select {
+    width: 100%;
+    padding: 6px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Results */
+.results {
+    flex: 1;
+}
+
+.results h2 {
+    margin-bottom: 15px;
+}
+
+/* Card Grid */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    padding: 10px;
+    background: white;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 5px;
+}
