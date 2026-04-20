@@ -13,3 +13,19 @@ document.addEventListener("click", (event) => {
   }
 });
 
+// User Profile Menu
+const userProfileBtn = document.getElementById("user-profile-btn");
+const userProfileMenu = document.getElementById("user-profile-menu");
+
+// Toggle user profile menu visibility
+userProfileBtn.addEventListener("click", () => {
+  userProfileMenu.style.display = userProfileMenu.style.display === "block" ? "none" : "block";
+});
+
+// Hide the user profile menu when clicking outside of it
+document.addEventListener("click", (event) => {
+  if (!userProfileBtn.contains(event.target) && !userProfileMenu.contains(event.target)) {
+    userProfileMenu.style.display = "none";
+  }
+});
+
